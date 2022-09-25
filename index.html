@@ -1,0 +1,187 @@
+<html>
+    <meta charset="UTF-8">
+    <title> Portfolio </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        * {box-sizing: border-box}
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("Images/BackgroundImage.jpg");
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        .hero-image{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/hero_image.jpg");
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: whitesmoke;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: whitesmoke;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .hero-text button:hover {
+            background-color: #555;
+            color: whitesmoke;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow:hidden;
+            background-color: #333;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+            display: block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        
+        .aboutme-heading {
+            color: whitesmoke;
+            text-align: center;
+        }
+        .aboutme p{
+            color:whitesmoke;
+            text-align:center;
+        }
+
+        .container{
+            width:100%;
+            background-color: whitesmoke;
+        }
+
+        .skills {
+            text-align: right;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: whitesmoke;
+        }
+
+        .html {width:10%; background-color: rgb(255, 5, 5);}
+        .java {width:70%; background-color: rgb(6, 205, 99);}
+        .csharp {width:90%; background-color: rgb(10, 127, 244);}
+        .cplus {width:90%; background-color: rgb(85, 85, 85);}
+
+        .myskills h1,p{color: whitesmoke;}
+
+        .contacts-heading {
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .contacts p{
+            color:whitesmoke;
+            text-align:center;
+        }
+
+        .footer{
+            position:static;
+            left:0;
+            bottom:0;
+            width:100%;
+            background-color:rgb(0, 0, 0);
+            color:whitesmoke;
+            text-align:center;
+        }
+
+        .footer p{
+            color:whitesmoke;
+        }
+
+    </style>
+
+    <body>
+        <!-- <img src="Images/BackgroundImage.jpg" alt="LA" style="width:100%"> -->
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+
+        <div class="hero-image">
+             <div class = "hero-text">
+                <h1>I am Ohm Patel</h1>   
+                <p>And I'm a Software Engineer</p> 
+                <button>Hire me</button>
+            </div>
+        </div>
+
+        <div class="aboutme" id="about">
+            <h2 class="aboutme-heading"> <u>About Me</u></h2>
+            <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+        </div>
+       
+        <div class="myskills" id="skills">
+            <h1><u>My Skills</u></h1>
+
+            <p>HTML/CSS/JavaScript</p>
+            <div class="container">
+                <div class="skills html">10%</div>
+            </div>
+            
+            <p>Java</p>
+            <div class="container">
+                <div class="skills java">70%</div>
+            </div>
+            
+
+            <p>C#</p>
+            <div class="container">
+                <div class="skills csharp">90%</div>
+            </div>
+            
+
+            <p>C++</p>
+            <div class="container">
+                <div class="skills cplus">90%</div>
+            </div>
+        </div>
+
+        <div class="contacts" id="contacts">
+            <h2 class="contacts-heading"> <u>Contacts</u></h2>
+            <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+        </div>
+       
+        <div class="footer">
+            <p>Copyright © 2022 Ohm Patel</p>
+        </div>
+       
+    </body>
+</html>
