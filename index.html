@@ -1,15 +1,18 @@
 <html>
+    <!-- Initializes the page so that it works for computers of all form factors -->
     <meta charset="UTF-8">
     <title> Portfolio </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
         * {box-sizing: border-box}
 
+        /* adds background image and a font style that is used throughout the page */
         body {
             background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("Images/BackgroundImage.jpg");
             font-family:'Times New Roman', Times, serif;
         }
-
+        
+        /*changes the position and form factor of the image at the top and dims the color of it making the other text popout more*/
         .hero-image{
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/hero_image.jpg");
             height: 50%;
@@ -18,7 +21,7 @@
             background-size: cover;
             position: relative;
         }
-        
+        /* Changes font layout and size of the text over the hero image and centers the text */
         .hero-text {
             position: absolute;
             top: 50%;
@@ -27,7 +30,7 @@
             text-align: center;
             transform: translate(-50%, -50%);
         }
-
+        /* Formats the button over the the hero image, currently it doesn't do anything */
         .hero-text button {
             border: none;
             outline: 0;
@@ -38,12 +41,12 @@
             text-align: center;
             cursor: pointer;
         }
-
+        /* Changes the color of the button when mouse is over it */
         .hero-text button:hover {
             background-color: #555;
             color: whitesmoke;
         }
-        
+        /* Used to format the overall of the nav bar, ul is used since its a list */
         ul {
             list-style-type: none;
             margin: 0;
@@ -51,11 +54,11 @@
             overflow:hidden;
             background-color: #333;
         }
-
+        /* Changes the positioning and fomatting of the nav bar */
         li {
         float: left;
         }
-
+        /* Changes the formatting of the text in the nav bar, such as color, alignment of the text, and adding padding which creates room around the text */
         li a {
             display: block;
             color: whitesmoke;
@@ -63,56 +66,57 @@
             padding: 14px 16px;
             text-decoration: none;
         }
-
+        /* Changes the color of each section on the nav bar when the mouse is over it */
         li a:hover {
             background-color: #111;
         }
-        
+        /* Changes the formatting of the header in the about me section */
         .aboutme-heading {
             color: whitesmoke;
             text-align: center;
             font-size: 200%;
         }
+        /* Changes the formatting of the text within the paragraph under about me */
         .aboutme p{
             color:whitesmoke;
             text-align:center;
         }
-
+        /* Creates a rectangular container where the skill bar will be displayed in */
         .container{
             width:100%;
             background-color: whitesmoke;
         }
-
+        /* Changes the formatting of the text of all sections within the skill bars */
         .skills {
             text-align: right;
             padding-top: 10px;
             padding-bottom: 10px;
             color: whitesmoke;
         }
-
+        /* Changes the formatting of the box inside the container to showcase the percent of each skill */
         .html {width:10%; background-color: rgb(255, 5, 5);}
         .java {width:70%; background-color: rgb(6, 205, 99);}
         .csharp {width:90%; background-color: rgb(10, 127, 244);}
         .cplus {width:90%; background-color: rgb(85, 85, 85);}
-
+        /* Changes the formatting of the header in the skills section */
         .myskills h1 {
             color: whitesmoke; 
             text-align: center;
         }
-
+        /* Changes the formatting of the wording above each skill bar */
         .myskills p {
             color: whitesmoke; 
             text-align: center;
             font-size: 112%;
         }
-
+        /* Formatting of the header in the contact me section */
         .contact h3 {
             color:whitesmoke;
             text-align:center;
             padding-top: 10px;
             font-size: 200%;
         }
-
+        /* Formats the text within the submit button  */
         input[type=text], select, textarea {
         width: 100%;
         padding: 12px;
@@ -124,7 +128,7 @@
         resize: vertical;
         text-align: center;
         }
-
+        /* Formats the layout of the submit button (not the text) */
         input[type=submit] {
         background-color: #04AA6D;
         color: white;
@@ -133,18 +137,18 @@
         border-radius: 4px;
         cursor: pointer;
         }
-
+        /* Changes the color slightly when the mouse is placed over the button */
         input[type=submit]:hover {
         background-color: #45a049;
         }
-
+        /* Formats the box which the contact me section is in (the blueish colored box in the background) */
         .contactContainer {
         border-radius: 5px;
         background-color:rgb(116, 181, 184);
         padding: 20px;
         text-align: center;
         }
-
+        /* Formats the footer section at the bottom of the page */
         .footer{
             position:static;
             left:0;
@@ -154,7 +158,7 @@
             color:whitesmoke;
             text-align:center;
         }
-
+        /* Changes the color of the text within the header */
         .footer p{
             color:whitesmoke;
         }
@@ -162,13 +166,14 @@
     </style>
 
     <body>
+        <!-- Initializing the nav bar and give a reference point for each section so that it can be called later in the page -->
         <ul>
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contacts">Contacts</a></li>
         </ul>
-
+        <!-- Displays text and the button over the hero image -->
         <div class="hero-image">
              <div class = "hero-text">
                 <h1>I am Ohm Patel</h1>   
@@ -176,14 +181,14 @@
                 <button>Hire me</button>
             </div>
         </div>
-
+        <!-- Sets up the about me section and a area where text can be placed, id is used so that nav bar section can be used to take user down to this area-->
         <div class="aboutme" id="about">
             <h2 class="aboutme-heading"> <u>About Me</u></h2>
             <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
                 adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
         </div>
-       
+        <!-- Creates the my skills section and initializes the layout so that it can be formatted in the style section above in the code -->
         <div class="myskills" id="skills">
             <h1><u>My Skills</u></h1>
 
@@ -210,32 +215,32 @@
             </div>
         </div>
 
-
-    <div class = "contact" id="contacts">
-        <h3><u>Contact Me</u></h3>
-
-        <div class="contactContainer">
-            <form action="thankyouPage.html">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select>
-      
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-            <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>     
-
+        <!-- Creates the contact section as a form and creates all the boxes where the user can enter their information -->
+        <div class = "contact" id="contacts">
+            <h3><u>Contact Me</u></h3>
+            <!-- Once the submit button is pressed, it will take the user to another page -->
+            <div class="contactContainer">
+                <form action="thankyouPage.html">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+        
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+                <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>     
+        <!-- Sets up the footer and the text that will be written in the section -->
         <div class="footer">
             <p>Copyright © 2022 Ohm Patel</p>
         </div>
